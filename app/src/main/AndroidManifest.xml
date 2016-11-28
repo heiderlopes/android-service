@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.heiderlopes.androidservice">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".foregroundservice.ForegroundActivity"
+            android:launchMode="singleTask" />
+
+        <service
+            android:name=".foregroundservice.ForegroundService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".broadcasteservice.BroadcastService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".broadcasteservice.BroadcastServiceActivity" />
+
+        <service
+            android:name=".boundservice.BoundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".boundservice.BoundActivity" />
+
+        <service
+            android:name=".intentservice.MeuIntentService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name=".downloadimageservice.DownloadIntentService" />
+
+        <activity android:name=".intentservice.IntentServicesActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".downloadimageservice.DownloadImageActivity" />
+
+        <service
+            android:name=".simplesplayerservice.PlayerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".simplesplayerservice.PlayerActivity"></activity>
+    </application>
+
+</manifest>
