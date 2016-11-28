@@ -52,6 +52,7 @@
 
         <service
             android:name=".simplesplayerservice.PlayerService"
+            android:process=":player_process"
             android:enabled="true"
             android:exported="true" />
 

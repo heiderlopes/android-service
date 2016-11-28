@@ -30,7 +30,7 @@ public class PlayerService extends Service implements MediaPlayer.OnCompletionLi
         if (!mediaPlayer.isPlaying()) {
             mediaPlayer.start();
         }
-        return START_STICKY;
+        return START_NOT_STICKY;
     }
 
     public void onDestroy() {
